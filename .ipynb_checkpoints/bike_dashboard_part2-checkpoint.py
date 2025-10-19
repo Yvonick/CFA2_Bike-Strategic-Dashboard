@@ -34,6 +34,13 @@ df_weather = pd.read_csv(
     dtype_backend="pyarrow",          # compact Arrow dtypes for ints/strings
 )
 
+# Sampled Dataframe
+df_sampled = pd.read_csv(
+    "Bike Data - Reduced.csv",
+    engine="pyarrow",                 # faster & lower memory
+    dtype_backend="pyarrow",          # compact Arrow dtypes for ints/strings
+)
+
 ### Drop-Down Menu to navigate the Dashboard
 
 page = st.sidebar.selectbox('Select an aspect of the analysis',
